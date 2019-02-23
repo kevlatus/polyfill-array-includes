@@ -1,11 +1,12 @@
 {
   "name": "polyfill-array-includes",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A polyfill for the Array.prototype.includes method.",
   "main": "index.js",
   "repository": "https://github.com/Latusinski/polyfill-array-includes",
   "author": "Kevin Latusinski",
   "license": "MIT",
+  "typings": "typings.d.ts",
   "scripts": {
     "build": "gulp build"
   },
