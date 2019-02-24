@@ -1,12 +1,14 @@
-const gulp = require('gulp');
+const {dest, task, src} = require('gulp');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
-gulp.task('build', function () {
-  return gulp.src('./array-includes.js')
+function build() {
+  return src('./array-includes.js')
     .pipe(uglify())
     .pipe(rename('index.js'))
-    .pipe(gulp.dest('./'))
-});
+    .pipe(dest('./'));
+}
 
-gulp.task('default', ['build'], function () { });
+task('build', build);
+
+task('default', build);
